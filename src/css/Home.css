@@ -1,0 +1,32 @@
+.Home-container {
+  display: flex;
+}
+
+.Home-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.Home-form {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Home-input {
+  width: 400px;
+  height: 30px;
+  font-size: large;
+}
+
+.Home-figure {
+  margin: 0;
+}
+.Home-ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}

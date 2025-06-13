@@ -1,0 +1,31 @@
+.Profile-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-header {
+  text-align: center;
+}
+
+.login-input {
+  font-size: large;
+  padding: 5px;
+}
+
+table {
+  min-width: 500px;
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
