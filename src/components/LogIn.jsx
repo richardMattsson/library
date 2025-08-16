@@ -35,9 +35,12 @@ function LogIn() {
   const { setLogin, users, setCurrentUser } = useContext(UserContext);
 
   function handleLogIn() {
+    // Denna delen skulle jag byta ut och jämföra med databasen istället
     const logInSuccess = users.some(
       (user) => user.user === userName && user.password === passwordValue
     );
+    // -------------------------------------------------------------------
+
     if (logInSuccess) {
       setCurrentUser(userName);
       setUserName('');

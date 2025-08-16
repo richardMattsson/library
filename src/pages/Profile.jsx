@@ -14,6 +14,7 @@ export default function Profile() {
   if (currentUser) {
     user = users.find((user) => user.user === currentUser);
   }
+  // MAn borde också kunna lägga in egna böcker med en bild.
 
   return (
     <>
@@ -57,6 +58,7 @@ export default function Profile() {
               ))}
             </tbody>
           </table>
+          {/* Här skulle jag behöva göra ett postanrop och ta bort token från tokens tabellen */}
           <button onClick={() => setCurrentUser(null)}>Logga ut</button>
         </>
       ) : (

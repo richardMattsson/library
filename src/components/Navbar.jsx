@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../css/Navbar.css';
-import logo from '../assets/books-svgrepo-com.svg';
+import logo from '../assets/book-svgrepo-com(1).svg';
 
 function Navbar() {
   return (

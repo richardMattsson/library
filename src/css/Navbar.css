@@ -3,6 +3,8 @@
   justify-content: space-between;
 
   padding: 1em;
+  /* border: 1px solid pink; */
+  max-width: 955px;
 }
 
 .Navbar-link-logo {
@@ -44,4 +46,21 @@
   background-color: rgb(247, 247, 247);
   color: black;
   border: 1px solid rgb(4, 4, 7);
+}
+
+@media only screen and (max-width: 620px) {
+  .Navbar-ul {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    justify-content: space-around;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .Navbar-nav {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 1em;
+  }
 }

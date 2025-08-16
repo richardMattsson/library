@@ -36,16 +36,18 @@ function CreateNewAccount() {
   const { setLogin, users, setUsers } = useContext(UserContext);
 
   function handleCreateAccount() {
+    // Denna delen jämföra med databasen istället.
     if (users.length > 0) {
       if (users.some((user) => user.user === userName)) {
         return alert('Ditt användarnamn måste vara unikt');
       }
     }
+    // ---------------------------------------------
     if (passwordValue !== comparePasswordValue) {
       alert('Ditt lösenord matchar inte');
     } else {
       alert(`Du har skapat ett konto`);
-
+      // Denna delen med ...
       if (users.length > 0) {
         setUsers([
           ...users,
@@ -56,7 +58,7 @@ function CreateNewAccount() {
           { user: userName, password: passwordValue, favoriteBooks: [] },
         ]);
       }
-
+      // -----------------------------------------
       setUserName('');
       setPasswordValue('');
       setComparePasswordValue('');
@@ -66,9 +68,10 @@ function CreateNewAccount() {
 
   return (
     <DivContainer>
+      {/* Här skulle jag behöva en action och method på formelementet */}
       <FormContainer onSubmit={handleCreateAccount}>
         <h2 className="login-header">Skapa konto</h2>
-
+        {/* Behöver sätta attributet name på inputfälten */}
         <input
           type="text"
           placeholder="Användarnamn"

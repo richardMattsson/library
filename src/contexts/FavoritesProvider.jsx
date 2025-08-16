@@ -16,6 +16,8 @@ function FavoritesContextProvider({ children }) {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
+  // Jag skulle behöva skapa en många till många tabeller med users, favoritebooks och user_favoritebooks
+  // Istället för spara böcker till users arrayen, spara id på boken i favoritebooks och koppla med foreign key med user
   const addToFavorites = (book) => {
     if (currentUser) {
       const updatedUsers = users.map((user) =>
@@ -28,7 +30,7 @@ function FavoritesContextProvider({ children }) {
       setFavorites([...favorites, book]);
     }
   };
-
+  // Här anropa endpoint instället som uppdaterar förhållandet mellan users och users_favoritebooks
   const removeFromFavorites = (bookId) => {
     if (currentUser) {
       const updatedUsers = users.map((user) =>
@@ -48,6 +50,7 @@ function FavoritesContextProvider({ children }) {
   };
 
   const isFavorite = (bookId) => {
+    // Här leta igenom databasen istället om boken är favorit eller inte
     if (currentUser) {
       const user = users.find((user) => user.user === currentUser);
 
