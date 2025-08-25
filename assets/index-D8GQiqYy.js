@@ -118,6 +118,7 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
 
   @media (max-width: 750px) {
     flex-direction: column;
+    padding: 10px;
   }
 `,_v=Ha.section`
   padding: ${n=>n.$padding}px;
